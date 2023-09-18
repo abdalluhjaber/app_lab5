@@ -1,0 +1,149 @@
+
+/*
+The selector points to the HTML element you want to style. 
+The declaration block contains one or more declarations separated by semicolons. 
+Each declaration includes a CSS property name and a value, separated by a colon. 
+A CSS declaration always ends with a semicolon, and declaration blocks are surrounded by curly braces. 
+*/
+
+p /*The element selector selects elements based on the element name*/
+ {     color: red;     text-align: center; }
+
+/*--------------------------------------------------------------------------------------------*/
+
+/*The id selector uses the id attribute of an HTML element to select a specific element*/
+
+#lab5 
+{    
+     text-align: center;  
+        color: red;
+}
+/*--------------------------------------------------------------------------------------------*/
+/*The class selector selects elements with a specific class attribute. */
+.line
+{     text-align: center;  
+       color: red;
+} 
+/*--------------------------------------------------------------------------------------------*/
+/*
+Grouping Selectors 
+If you have elements with the same style definitions, like this:
+ */
+ h1, h2, p
+{
+    text-align: center;
+    color: rgb(12, 3, 3); 
+} 
+ 
+
+.test{
+    /*الهوامش الداخليه*/
+    padding:10px; 
+    /*top right bottom left */
+    /*10px  10px  10px   10px */
+
+
+    /* Shorthand property to set values for the thickness of the padding area.
+      If left is omitted,
+       it is the same as right. 
+       If bottom is omitted it is the same as top, 
+       if right is omitted it is the same as top. 
+       The value may not be negative.*/
+
+
+       padding:10px 20px;
+       /*top right bottom left */
+       /*10px  20px  10px   20px */
+
+
+       padding:10px 20px 15px;
+             /*top right bottom left */
+            /*10px  20px  15px   20px */
+
+            /*اذا اردنا تحديد جه واحده نستخدم احد الخواص الاتية*/
+           /*
+            padding-top
+            padding-right
+            padding-bottom
+            padding-left
+            */
+
+}
+.test
+{
+    margin:10px ;
+    /*  الهوامش الخارجيه 
+    التحكم به  يشبه الهوامش الداخليه معئ بعض الفروق 
+    1-المارجن يقبل قيمه سالبه
+    2-المارجن
+    */
+    /*Shorthand property to set values for the thickness of the margin area
+    . If left is omitted, it is the same as right. 
+    If bottom is omitted it is the same as top,
+     if right is omitted it is the same as top.
+      Negative values for margin properties are allowed,
+     but there may be implementation-specific limits.*/
+}
+.line
+{     margin-top: 100px; 
+        margin-bottom: 100px; 
+        margin-right: 150px; 
+            margin-left: 80px;
+} 
+     
+
+     /*CSS Borders
+      Border Style 
+         The border-style property specifies what kind of border to display. 
+         The following values are allowed: 
+         dotted - Defines a dotted border
+           dashed - Defines a dashed border 
+           solid - Defines a solid border 
+           double - Defines a double border 
+           groove - Defines a 3D grooved border. 
+          The effect depends on the border-color value 
+           ridge - Defines a 3D ridged border. 
+          The effect depends on the border-color value
+            inset - Defines a 3D inset border. 
+           The effect depends on the border-color value 
+            outset - Defines a 3D outset border.
+            The effect depends on the border-color value
+              none - Defines no border 
+         p.dotted {border-style: dotted;} p.dashed {border-style: dashed;} p.solid {border-style: solid;} */
+         p.one 
+         {     border-style: solid; 
+                border-width: 5px;
+            border-color: red;
+         } 
+ 
+p.two 
+{     border-style: solid;   
+      border-width: medium;
+      border-color: seagreen;
+ } 
+ 
+p.three 
+{     border-style: solid; 
+        border-width: 2px 10px 4px 20px;
+        /*              top   right   bottom   left */
+        border-color: red green blue yellow;
+}
+
+/*From the examples above you have seen that it is possible to specify a different border for each side. 
+In CSS, there is also properties for specifying each of the borders (top, right, bottom, and left): */
+.line
+{     
+        border-top-style: dotted;
+        border-right-style: solid;
+        border-bottom-style: dotted;
+        border-left-style: solid;
+} 
+.test{
+    color: white;
+    border: inset;
+    border-top-style: double;
+    border-right-style: groove;
+    border-bottom-style: solid;
+    border-left-style: outset;
+    border: 5px solid yellow;
+}
